@@ -50,7 +50,7 @@ public class Run {
         ProcessingRules processingRules = new ProcessingRules() {{
             on("display_description").call(p -> displayAndSaveDescription(p[0], p[1])).then(publish());
             // STEP 5. Uncomment the following line to register the sum method and run again
-            on("sum").call(p -> App.sum(asInt(p[0]), asInt(p[1]))).then(publishIf(ready));
+//            on("sum").call(p -> App.sum(asInt(p[0]), asInt(p[1]))).then(publishIf(ready));
         }};
 
         // STEP 6. Run the test (competition.warmup.AppTest) and see it fail
