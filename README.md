@@ -25,7 +25,7 @@ Warmup code provided to kickstart the challenge.
 
 |                                     |  Java   | Node.js | Python  | Ruby    |
 | ----------------------------------- |:-------:|:-------:|:-------:|:-------:|
-| Client Spec version v0.10           | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| Client Spec version v0.11           | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
 ||
 | Minimal test setup                  | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
 | Description saved on disk           | ![yeah] | ![yeah] | ![yeah] | ![yeah] |

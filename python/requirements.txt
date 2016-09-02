@@ -1,1 +1,1 @@
-tdl-client-python==0.10.2
+tdl-client-python==0.11.0
