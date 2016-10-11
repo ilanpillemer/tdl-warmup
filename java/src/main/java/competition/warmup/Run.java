@@ -95,6 +95,10 @@ public class Run {
         return "OK";
     }
 
+    private static String asString(String s) {
+        return s;
+    }
+
     private static double asNumber(String s) {
         return Double.parseDouble(s);
     }
