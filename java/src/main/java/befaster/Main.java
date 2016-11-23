@@ -42,8 +42,8 @@ public class Main {
      *   +------+----------------------------------------+-----------------------------------------------+
      */
     public static void main(String[] args) {
-        ClientRunner.forUser("julian")
-                .withServerHostname("localhost")
+        ClientRunner.forUserWithEmail("your_email_here")
+                .withServerHostname("hostname_goes_here")
                 .withActionIfNoArgs(RunnerAction.connectivityTest)
                 .start(args);
     }

@@ -19,7 +19,7 @@ public class ClientRunner {
     private RunnerAction defaultRunnerAction = RunnerAction.connectivityTest;
     private final String email;
 
-    public static ClientRunner forUser(String email) {
+    public static ClientRunner forUserWithEmail(String email) {
         return new ClientRunner(email);
     }
 
