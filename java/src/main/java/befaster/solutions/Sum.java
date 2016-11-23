@@ -1,9 +1,6 @@
-package competition.warmup;
+package befaster.solutions;
 
-/**
- * Created by julianghionoiu on 23/08/2015.
- */
-public class App {
+public class Sum {
 
     public static int sum(int x, int y) {
         throw new RuntimeException("method not implemented");
