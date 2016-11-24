@@ -1,5 +1,6 @@
 apply plugin: 'java'
 
+//noinspection GroovyUnusedAssignment
 sourceCompatibility = 1.8
 group 'competition'
 
@@ -28,13 +29,14 @@ dependencies {
 
 apply plugin: 'application'
 
-mainClassName = 'competition.warmup.Run'
+mainClassName = 'befaster.Main'
 
 run {
     standardInput = System.in
 
-    def ready = System.getProperty('ready', 'false')
-    args([ ready ])
+    def action = System.getProperty('action', '')
+    //noinspection GroovyAssignabilityCheck
+    args([ action ])
 }
 
 jar {

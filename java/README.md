@@ -7,5 +7,5 @@
 
 ## 2. How to start
 
-- Open `src/main/java/competition/warmup/Run.java`
-- Follow the comments marked with `STEP`
+- Open `src/main/java/befaster/Main.java`
+- Read the documentation
