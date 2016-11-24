@@ -3,7 +3,7 @@ package befaster;
 import befaster.runner.ClientRunner;
 import befaster.runner.RunnerAction;
 
-public class Main {
+public class BeFasterApp {
 
     /**
      * ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
@@ -33,7 +33,7 @@ public class Main {
      *   |  5.  | Run "getNewRoundDescription"           |                                               |
      *   |  6.  | Read description from ./challenges     |                                               |
      *   |  7.  | Implement the required method in       |                                               |
-     *   |      |   ./src/main/java/implementations      |                                               |
+     *   |      |   ./src/main/java/solutions            |                                               |
      *   |  8.  | Run "connectivityTest", observe output |                                               |
      *   |  9.  | If ready, run "deployToProduction"     |                                               |
      *   | 10.  |                                        | Type "done"                                   |
