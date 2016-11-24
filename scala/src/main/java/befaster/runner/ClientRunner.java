@@ -1,5 +1,6 @@
 package befaster.runner;
 
+import befaster.solutions.Sum;
 import com.google.common.io.Files;
 
 import java.io.File;
@@ -46,7 +47,7 @@ public class ClientRunner {
 
         ProcessingRules processingRules = new ProcessingRules() {{
             on("display_description").call(p -> displayAndSaveDescription(asString(p[0]), asString(p[1]))).then(publish());
-//            on("sum").call(p -> Sum.sum(asInt(p[0]), asInt(p[1]))).then(runnerAction.getClientAction());
+            on("sum").call(p -> Sum.sum(asInt(p[0]), asInt(p[1]))).then(runnerAction.getClientAction());
         }};
         client.goLiveWith(processingRules);
     }

@@ -7,5 +7,5 @@
 
 ## 2. How to start
 
-- Open `src/main/java/befaster/Main.java`
+- Open `src/main/java/befaster/BeFasterApp.java`
 - Read the documentation

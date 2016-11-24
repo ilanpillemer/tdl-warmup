@@ -1,4 +1,4 @@
-name := "tlp"
+name := "tdl-warmup-scala"
 
 version := "1.0"
 

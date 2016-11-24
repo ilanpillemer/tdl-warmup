@@ -12,6 +12,7 @@ Warmup code provided to kickstart the challenge.
   * [Node.js](https://github.com/julianghionoiu/tdl-warmup/tree/master/nodejs)
   * [Python](https://github.com/julianghionoiu/tdl-warmup/tree/master/python)
   * [Ruby](https://github.com/julianghionoiu/tdl-warmup/tree/master/ruby)
+  * [Scala](https://github.com/julianghionoiu/tdl-warmup/tree/master/scala)
 3. Read the language specific instructions
 
 ## B. How the systems works
@@ -23,16 +24,16 @@ Warmup code provided to kickstart the challenge.
 [yeah]: https://upload.wikimedia.org/wikipedia/commons/5/50/Yes_Check_Circle.svg
 [nope]: https://upload.wikimedia.org/wikipedia/commons/f/f5/No_Cross.svg
 
-|                                     |  Java   | Node.js | Python  | Ruby    |
-| ----------------------------------- |:-------:|:-------:|:-------:|:-------:|
-| Client Spec version v0.11           | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+|                                     |  Java   | Node.js | Python  | Ruby    | Scala   |
+| ----------------------------------- |:-------:|:-------:|:-------:|:-------:|:-------:|
+| Client Spec version v0.11           | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
 ||
-| Minimal test setup                  | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
-| Description saved on disk           | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
-| Switch modes from command line      | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
-| Switch modes from IDE               | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
-| Separate setup from client app code | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| Minimal test setup                  | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| Description saved on disk           | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| Switch modes from command line      | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| Switch modes from IDE               | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| Separate setup from client app code | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
 ||
-| Use "add numbers" example           | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
-| Step by step documentation          | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
-| List of language dependencies       | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| Use "add numbers" example           | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| Step by step documentation          | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
+| List of language dependencies       | ![yeah] | ![yeah] | ![yeah] | ![yeah] | ![yeah] |
