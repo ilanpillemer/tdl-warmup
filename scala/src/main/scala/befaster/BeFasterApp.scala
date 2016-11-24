@@ -8,16 +8,16 @@ object BeFasterApp extends App {
     * ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
     *
     * From command line:
-    * sbt "run $ACTION"
+    *     sbt "run $ACTION"
     *
     * From IDE:
-    * Set the value of the `actionIfNoArgs`
-    * Run this class from IDE.
+    *     Set the value of the `actionIfNoArgs`
+    *     Run this class from IDE.
     *
     * Available actions:
-    * * getNewRoundDescription - Get the round description (works only once per round).
-    * * connectivityTest       - Test you can connect to the server and you have implemented the right method.
-    * * deployToProduction     - Release the software. Real requests will be sent to your method.
+    *     * getNewRoundDescription - Get the round description (works only once per round).
+    *     * testConnectivity       - Test you can connect to the server and you have implemented the right method.
+    *     * deployToProduction     - Release the software. Real requests will be sent to your method.
     *
     *
     * ~~~~~~~~~~ The workflow ~~~~~~~~~~~~~
@@ -33,7 +33,7 @@ object BeFasterApp extends App {
     * |  6.  | Read description from ./challenges     |                                               |
     * |  7.  | Implement the required method in       |                                               |
     * |      |   ./src/main/scala/solutions           |                                               |
-    * |  8.  | Run "connectivityTest", observe output |                                               |
+    * |  8.  | Run "testConnectivity", observe output |                                               |
     * |  9.  | If ready, run "deployToProduction"     |                                               |
     * | 10.  |                                        | Type "done"                                   |
     * | 11.  |                                        | Check failed requests                         |
@@ -42,6 +42,6 @@ object BeFasterApp extends App {
     */
   ClientRunner.forUserWithEmail("your_email_here")
     .withServerHostname("hostname_goes_here")
-    .withActionIfNoArgs(connectivityTest)
+    .withActionIfNoArgs(testConnectivity)
     .start(args)
 }

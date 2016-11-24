@@ -15,7 +15,7 @@ import static tdl.client.actions.ClientActions.publish;
 
 public class ClientRunner {
     private String hostname = "run.befaster.io";
-    private RunnerAction defaultRunnerAction = RunnerAction.connectivityTest;
+    private RunnerAction defaultRunnerAction = RunnerAction.testConnectivity;
     private final String email;
 
     public static ClientRunner forUserWithEmail(String email) {
@@ -55,10 +55,8 @@ public class ClientRunner {
     private static Optional<RunnerAction> extractActionFrom(String[] args) {
         String firstArg = args.length > 0 ? args[0] : null;
         return Arrays.stream(RunnerAction.values())
-                .map(Enum::name)
-                .filter(s -> s.equalsIgnoreCase(firstArg))
-                .findFirst()
-                .map(RunnerAction::valueOf);
+                .filter(runnerAction -> runnerAction.name().equalsIgnoreCase(firstArg))
+                .findFirst();
     }
 
     //~~~~~~~ Provided implementations ~~~~~~~~~~~~~~

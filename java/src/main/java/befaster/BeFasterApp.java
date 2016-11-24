@@ -9,7 +9,7 @@ public class BeFasterApp {
      * ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
      *
      *   From command line:
-     *          ./gradlew run -Daction=$ACTION
+     *      ./gradlew run -Daction=$ACTION
      *
      *   From IDE:
      *      Set the value of the `actionIfNoArgs`
@@ -17,7 +17,7 @@ public class BeFasterApp {
      *
      *   Available actions:
      *        * getNewRoundDescription - Get the round description (works only once per round).
-     *        * connectivityTest       - Test you can connect to the server and you have implemented the right method.
+     *        * testConnectivity       - Test you can connect to the server and you have implemented the right method.
      *        * deployToProduction     - Release the software. Real requests will be sent to your method.
      *
      *
@@ -34,7 +34,7 @@ public class BeFasterApp {
      *   |  6.  | Read description from ./challenges     |                                               |
      *   |  7.  | Implement the required method in       |                                               |
      *   |      |   ./src/main/java/solutions            |                                               |
-     *   |  8.  | Run "connectivityTest", observe output |                                               |
+     *   |  8.  | Run "testConnectivity", observe output |                                               |
      *   |  9.  | If ready, run "deployToProduction"     |                                               |
      *   | 10.  |                                        | Type "done"                                   |
      *   | 11.  |                                        | Check failed requests                         |
@@ -44,7 +44,7 @@ public class BeFasterApp {
     public static void main(String[] args) {
         ClientRunner.forUserWithEmail("your_email_here")
                 .withServerHostname("hostname_goes_here")
-                .withActionIfNoArgs(RunnerAction.connectivityTest)
+                .withActionIfNoArgs(RunnerAction.testConnectivity)
                 .start(args);
     }
 }

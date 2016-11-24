@@ -9,5 +9,5 @@
 ## 2. How to start
 
 - Install dependencies `pip install -r requirements.txt`
-- Open `lib/run.py`
-- Follow the comments marked with `STEP`
+- Open `lib/befaster_app.py`
+- Read the documentation
