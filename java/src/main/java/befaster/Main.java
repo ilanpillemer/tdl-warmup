@@ -16,9 +16,9 @@ public class Main {
      *      Run this class from IDE.
      *
      *   Available actions:
-     *        * getNewRoundDescription - processes the message containing the round description
-     *        * connectivityTest       - connects to the server and peeks at the first request
-     *        * processRealRequests    - connects to the server and processes ALL the requests
+     *        * getNewRoundDescription - Get the round description (works only once per round).
+     *        * connectivityTest       - Test you can connect to the server and you have implemented the right method.
+     *        * deployToProduction     - Release the software. Real requests will be sent to your method.
      *
      *
      * ~~~~~~~~~~ The workflow ~~~~~~~~~~~~~
@@ -35,7 +35,7 @@ public class Main {
      *   |  7.  | Implement the required method in       |                                               |
      *   |      |   ./src/main/java/implementations      |                                               |
      *   |  8.  | Run "connectivityTest", observe output |                                               |
-     *   |  9.  | If ready, run "processRealRequests"    |                                               |
+     *   |  9.  | If ready, run "deployToProduction"     |                                               |
      *   | 10.  |                                        | Type "done"                                   |
      *   | 11.  |                                        | Check failed requests                         |
      *   | 12.  |                                        | Go to step 5.                                 |
