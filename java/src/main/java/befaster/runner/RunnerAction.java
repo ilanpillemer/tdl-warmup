@@ -1,17 +1,20 @@
 package befaster.runner;
 
+import tdl.client.actions.ClientAction;
+import tdl.client.actions.ClientActions;
+
 public enum RunnerAction {
-    getNewRoundDescription(false),
-    connectivityTest(false),
-    processRealRequests(true);
+    getNewRoundDescription(ClientActions.stop()),
+    connectivityTest(ClientActions.stop()),
+    deployToProduction(ClientActions.publish());
 
-    private boolean shouldPublish;
+    private ClientAction clientAction;
 
-    RunnerAction(boolean shouldPublish) {
-        this.shouldPublish = shouldPublish;
+    RunnerAction(ClientAction clientAction) {
+        this.clientAction = clientAction;
     }
 
-    public boolean isShouldPublish() {
-        return shouldPublish;
+    public ClientAction getClientAction() {
+        return clientAction;
     }
 }

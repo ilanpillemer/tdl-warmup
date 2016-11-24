@@ -39,6 +39,7 @@ public class ClientRunner {
 
     public void start(String[] args) {
         RunnerAction runnerAction = extractActionFrom(args).orElse(defaultRunnerAction);
+        System.out.println("Chosen action is: "+runnerAction.name());
 
         Client client = new Client.Builder()
                 .setHostname(hostname)
@@ -47,7 +48,7 @@ public class ClientRunner {
 
         ProcessingRules processingRules = new ProcessingRules() {{
             on("display_description").call(p -> displayAndSaveDescription(asString(p[0]), asString(p[1]))).then(publish());
-            on("sum").call(p -> Sum.sum(asInt(p[0]), asInt(p[1]))).then(publishIf(runnerAction.isShouldPublish()));
+            on("sum").call(p -> Sum.sum(asInt(p[0]), asInt(p[1]))).then(runnerAction.getClientAction());
         }};
         client.goLiveWith(processingRules);
     }
@@ -59,10 +60,6 @@ public class ClientRunner {
                 .filter(s -> s.equalsIgnoreCase(firstArg))
                 .findFirst()
                 .map(RunnerAction::valueOf);
-    }
-
-    private static ClientAction publishIf(boolean ready) {
-        return ready ? publish() : stop();
     }
 
     //~~~~~~~ Provided implementations ~~~~~~~~~~~~~~
