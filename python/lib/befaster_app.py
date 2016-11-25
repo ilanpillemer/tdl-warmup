@@ -15,9 +15,10 @@ from runner.runner_action import RunnerActions
 
  Available actions:
      * get_new_round_description - Get the round description (works only once per round).
-     * test_connectivity       - Test you can connect to the server and you have implemented the right method.
-     * deploy_to_production     - Release the software. Real requests will be sent to your method.
-
+     * test_connectivity         - Test you can connect to the server (call any number of time)
+     * deploy_to_production      - Release your code. Real requests will be used to test your solution.
+                                   If your solution is wrong you get a penalty of 10 minutes.
+                                   After you fix the problem, you should deploy a new version into production.
 
  ~~~~~~~~~~ The workflow ~~~~~~~~~~~~~
 

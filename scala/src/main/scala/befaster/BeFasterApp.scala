@@ -17,7 +17,10 @@ object BeFasterApp extends App {
     * Available actions:
     *     * getNewRoundDescription - Get the round description (works only once per round).
     *     * testConnectivity       - Test you can connect to the server and you have implemented the right method.
-    *     * deployToProduction     - Release the software. Real requests will be sent to your method.
+    *     * deployToProduction     - Release your code. Real requests will be used to test your solution.
+    *                                If your solution is wrong you get a penalty of 10 minutes.
+    *                                After you fix the problem, you should deploy a new version into production.
+    *
     *
     *
     * ~~~~~~~~~~ The workflow ~~~~~~~~~~~~~

@@ -4,7 +4,6 @@ import befaster.runner.ClientRunner;
 import befaster.runner.RunnerAction;
 
 public class BeFasterApp {
-
     /**
      * ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
      *
@@ -16,10 +15,11 @@ public class BeFasterApp {
      *      Run this class from IDE.
      *
      *   Available actions:
-     *        * getNewRoundDescription - Get the round description (works only once per round).
-     *        * testConnectivity       - Test you can connect to the server and you have implemented the right method.
-     *        * deployToProduction     - Release the software. Real requests will be sent to your method.
-     *
+     *        * getNewRoundDescription - Get the round description (call once per round).
+     *        * testConnectivity       - Test you can connect to the server (call any number of time)
+     *        * deployToProduction     - Release your code. Real requests will be used to test your solution.
+     *                                   If your solution is wrong you get a penalty of 10 minutes.
+     *                                   After you fix the problem, you should deploy a new version into production.
      *
      * ~~~~~~~~~~ The workflow ~~~~~~~~~~~~~
      *
