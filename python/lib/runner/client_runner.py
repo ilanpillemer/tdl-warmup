@@ -25,7 +25,7 @@ def configure_logging():
 
 # ~~~~~~~~ Runner ~~~~~~~~~~
 
-def start_client(args, email, hostname='run.befaster.io', action_if_no_args=RunnerActions.test_connectivity):
+def start_client(args, email, hostname, action_if_no_args):
     configure_logging()
 
     value_from_args = extract_action_from(args)

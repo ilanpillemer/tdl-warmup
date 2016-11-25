@@ -11,11 +11,6 @@ var fizz_buzz = require('./../solutions/fizz_buzz');
 // ~~~~~~~~~ Setup ~~~~~~~~~
 
 function startClient(args, options) {
-    if (options === undefined) options = {};
-    if (options.email === undefined) throw new Error("Email not specified.");
-    if (options.hostname === undefined) options.hostname = "run.befaster.io";
-    if (options.actionIfNoArgs === undefined) options.actionIfNoArgs = RunnerActions.testConnectivity;
-
     var valueFromArgs = extractActionFrom(args);
     var runnerAction = valueFromArgs === undefined ? options.actionIfNoArgs : valueFromArgs;
     console.log("Chosen action is: %s", runnerAction.name);
