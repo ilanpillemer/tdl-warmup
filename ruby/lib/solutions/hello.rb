@@ -1,6 +1,6 @@
-class Sum
+class Hello
 
-  def apply(x, y)
+  def apply(friend_name)
     raise 'Not implemented'
   end
 

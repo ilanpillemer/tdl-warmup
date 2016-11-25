@@ -1,6 +1,6 @@
-class Sum
+class FizzBuzz
 
-  def apply(x, y)
+  def apply(number)
     raise 'Not implemented'
   end
 

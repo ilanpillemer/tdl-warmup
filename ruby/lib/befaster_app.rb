@@ -42,5 +42,5 @@ include RunnerActions
 #
 start_client(ARGV,
              email='your_email_here',
-             hostname='hostname_goes_here',
+             hostname='run.befaster.io',
              action_if_no_args=test_connectivity)

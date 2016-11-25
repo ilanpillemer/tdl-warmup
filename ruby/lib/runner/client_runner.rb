@@ -3,14 +3,16 @@ require 'logging'
 Logging.logger.root.appenders = Logging.appenders.stdout
 Logging.logger.root.level = :info
 
-require_relative '../../lib/solutions/sum'
 require_relative '../../lib/runner/runner_action'
+require_relative '../../lib/solutions/sum'
+require_relative '../../lib/solutions/hello'
+require_relative '../../lib/solutions/fizz_buzz'
 
 include RunnerActions
 
 # ~~~~~~~~~ Setup ~~~~~~~~~
 
-def start_client(argv, email, hostname='run.befaster.io', action_if_no_args=RunnerActions.test_connectivity)
+def start_client(argv, email, hostname, action_if_no_args)
   value_from_argv = extract_action_from(argv)
   runner_action = value_from_argv !=  nil ? value_from_argv : action_if_no_args
   puts("Chosen action is: #{runner_action.name}")
@@ -19,7 +21,9 @@ def start_client(argv, email, hostname='run.befaster.io', action_if_no_args=Runn
 
   rules = TDL::ProcessingRules.new
   rules.on('display_description').call(method(:display_and_save_description)).then(publish)
-  rules.on('sum').call(Sum.new.method(:sum)).then(runner_action.client_action)
+  rules.on('sum').call(Sum.new.method(:apply)).then(runner_action.client_action)
+  rules.on('hello').call(Hello.new.method(:apply)).then(runner_action.client_action)
+  rules.on('fizz_buzz').call(FizzBuzz.new.method(:apply)).then(runner_action.client_action)
 
   client.go_live_with(rules)
 end

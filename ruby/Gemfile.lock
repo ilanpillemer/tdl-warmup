@@ -8,7 +8,7 @@ GEM
     minitest (5.8.3)
     multi_json (1.12.1)
     stomp (1.3.4)
-    tdl-client-ruby (0.10.2)
+    tdl-client-ruby (0.11.1)
       logging (= 2.0.0)
       stomp (= 1.3.4)
 
@@ -18,7 +18,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest (~> 5.8.3)
-  tdl-client-ruby (= 0.10.2)
+  tdl-client-ruby (= 0.11.1)
 
 RUBY VERSION
    ruby 2.2.2p95
