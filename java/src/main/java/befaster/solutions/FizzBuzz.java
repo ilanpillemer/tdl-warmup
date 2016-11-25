@@ -1,8 +1,8 @@
 package befaster.solutions;
 
-public class Sum {
+public class FizzBuzz {
 
-    public static int apply(int x, int y) {
+    public static String apply(Integer number) {
         throw new RuntimeException("method not implemented");
     }
 

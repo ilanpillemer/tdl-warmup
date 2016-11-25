@@ -10,6 +10,6 @@ public class SumTest {
 
     @Test
     public void compute_sum() {
-        assertThat(Sum.sum(1, 1), equalTo(2));
+        assertThat(Sum.apply(1, 1), equalTo(2));
     }
 }

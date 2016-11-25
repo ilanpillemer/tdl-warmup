@@ -43,7 +43,7 @@ public class BeFasterApp {
      */
     public static void main(String[] args) {
         ClientRunner.forUserWithEmail("your_email_here")
-                .withServerHostname("hostname_goes_here")
+                .withServerHostname("run.befaster.io")
                 .withActionIfNoArgs(RunnerAction.testConnectivity)
                 .start(args);
     }

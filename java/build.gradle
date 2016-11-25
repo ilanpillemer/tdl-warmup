@@ -29,7 +29,7 @@ dependencies {
 
 apply plugin: 'application'
 
-mainClassName = 'befaster.Main'
+mainClassName = 'befaster.BeFasterApp'
 
 run {
     standardInput = System.in
