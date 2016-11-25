@@ -4,8 +4,10 @@ import sys
 from tdl.client import Client
 from tdl.processing_rules import ProcessingRules
 
-from solutions.sum import sum
 from runner.runner_action import RunnerActions
+from solutions.sum import sum
+from solutions.hello import hello
+from solutions.fizz_buzz import fizz_buzz
 
 
 def configure_logging():
@@ -37,6 +39,8 @@ def start_client(args, email, hostname, action_if_no_args):
     rules = ProcessingRules()
     rules.on("display_description").call(display_and_save_description).then("publish")
     rules.on("sum").call(sum).then(runner_action.client_action)
+    rules.on("hello").call(hello).then(runner_action.client_action)
+    rules.on("fizz_buzz").call(fizz_buzz).then(runner_action.client_action)
 
     client.go_live_with(rules)
 
