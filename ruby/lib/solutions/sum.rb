@@ -1,4 +1,4 @@
-class App
+class Sum
 
   def sum(x, y)
     raise 'Not implemented'

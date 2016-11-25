@@ -15,7 +15,5 @@ task :default => :test
 
 desc 'Run the client'
 task :run do
-  ready = ENV['ready'] == 'true' ? true : false
-
-  sh "ruby -I lib lib/run.rb #{ready}"
+  sh "ruby -I lib lib/befaster_app.rb #{ENV['action']}"
 end

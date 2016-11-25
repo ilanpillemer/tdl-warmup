@@ -25,7 +25,7 @@ def configure_logging():
 
 # ~~~~~~~~ Runner ~~~~~~~~~~
 
-def start_client(args, email, hostname='run.befaster.io', action_if_no_args="connectivity_test"):
+def start_client(args, email, hostname='run.befaster.io', action_if_no_args=RunnerActions.test_connectivity):
     configure_logging()
 
     value_from_args = extract_action_from(args)
@@ -43,10 +43,11 @@ def start_client(args, email, hostname='run.befaster.io', action_if_no_args="con
 
 def extract_action_from(args):
     if len(args) > 0:
-        firstArg = args[0]
-        return get_first([action for action in RunnerActions.all if action.name.lower() == firstArg.lower()])
+        first_arg = args[0]
     else:
-        return None
+        first_arg = ""
+
+    return get_first([action for action in RunnerActions.all if action.name.lower() == first_arg.lower()])
 
 
 def get_first(iterable, default=None):
