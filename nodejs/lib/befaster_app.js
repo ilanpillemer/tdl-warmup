@@ -6,7 +6,7 @@ var startClient = require('./runner/client_runner');
  * ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
  *
  *   From command line:
- *      npm start -Daction=$ACTION
+ *      npm start $ACTION
  *
  *   From IDE:
  *      Set the value of the `actionIfNoArgs`
@@ -42,6 +42,6 @@ var startClient = require('./runner/client_runner');
 var args = process.argv.slice(2, process.argv.length);
 startClient(args, {
     email: 'your_email_here',
-    hostname: 'hostname_goes_here',
+    hostname: 'run.befaster.io',
     actionIfNoArgs: RunnerActions.testConnectivity
 });

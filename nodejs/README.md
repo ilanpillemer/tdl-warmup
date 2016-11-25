@@ -9,5 +9,5 @@
 ## 2. How to start
 
 - Install dependencies `npm install`
-- Open `lib/client_runner.js`
-- Follow the comments marked with `STEP`
+- Open `lib/befaster_app.js`
+- Read the documentation

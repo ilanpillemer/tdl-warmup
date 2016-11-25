@@ -5,6 +5,8 @@ var publish = TDL.ClientActions.publish;
 
 var RunnerActions = require('./runner_actions');
 var sum = require('./../solutions/sum');
+var hello = require('./../solutions/hello');
+var fizz_buzz = require('./../solutions/fizz_buzz');
 
 // ~~~~~~~~~ Setup ~~~~~~~~~
 
@@ -23,6 +25,8 @@ function startClient(args, options) {
     var rules = new TDL.ProcessingRules();
     rules.on('display_description').call(displayAndSaveDescription).then(publish());
     rules.on('sum').call(sum).then(runnerAction.clientAction);
+    rules.on('hello').call(hello).then(runnerAction.clientAction);
+    rules.on('fizz_buzz').call(fizz_buzz).then(runnerAction.clientAction);
 
     client.goLiveWith(rules)
 }
@@ -43,7 +47,7 @@ function displayAndSaveDescription(label, description) {
     console.log(description);
 
     var fs = require('fs');
-    var outputFile = require('path').resolve(__dirname, '../challenges')+"/"+label+".txt";
+    var outputFile = require('path').resolve(__dirname, '../../challenges')+"/"+label+".txt";
     fs.writeFileSync(outputFile, description);
     console.log("Challenge description saved to file: "+outputFile+".");
 
