@@ -7,7 +7,7 @@ from runner.runner_action import RunnerActions
  ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
 
  From command line:
-    PYTHONPATH=lib python lib/client_runner.py $ACTION
+    PYTHONPATH=lib python lib/befaster_app.py $ACTION
 
  From IDE:
     Set the value of the `action_if_no_args`
@@ -42,5 +42,5 @@ from runner.runner_action import RunnerActions
 """
 start_client(sys.argv[1:],
              email="your_email_here",
-             hostname="hostname_goes_here",
+             hostname="run.befaster.io",
              action_if_no_args=RunnerActions.test_connectivity)
