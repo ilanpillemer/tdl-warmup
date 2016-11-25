@@ -8,4 +8,4 @@ catch(e) {
 }
 
 process.chdir(__dirname);
-reporter.run(['test']);
+reporter.run(['test', 'test/solutions']);

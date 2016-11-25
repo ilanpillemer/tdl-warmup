@@ -9,5 +9,5 @@
 ## 2. How to start
 
 - Install dependencies `bundle install`
-- Open `lib/run.rb`
-- Follow the comments marked with `STEP`
+- Open `lib/befaster_app.rb`
+- Read the documentation

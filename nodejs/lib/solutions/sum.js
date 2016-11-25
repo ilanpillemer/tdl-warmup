@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports.sum = function (x, y) {
+module.exports = function (x, y) {
     throw new Error("method not implemented");
 };
