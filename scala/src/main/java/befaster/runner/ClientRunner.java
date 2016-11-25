@@ -1,5 +1,7 @@
 package befaster.runner;
 
+import befaster.solutions.FizzBuzz;
+import befaster.solutions.Hello;
 import befaster.solutions.Sum;
 import com.google.common.io.Files;
 
@@ -14,8 +16,8 @@ import tdl.client.ProcessingRules;
 import static tdl.client.actions.ClientActions.publish;
 
 public class ClientRunner {
-    private String hostname = "run.befaster.io";
-    private RunnerAction defaultRunnerAction = RunnerAction.testConnectivity;
+    private String hostname;
+    private RunnerAction defaultRunnerAction;
     private final String email;
 
     public static ClientRunner forUserWithEmail(String email) {
@@ -47,7 +49,9 @@ public class ClientRunner {
 
         ProcessingRules processingRules = new ProcessingRules() {{
             on("display_description").call(p -> displayAndSaveDescription(asString(p[0]), asString(p[1]))).then(publish());
-            on("sum").call(p -> Sum.sum(asInt(p[0]), asInt(p[1]))).then(runnerAction.getClientAction());
+            on("sum").call(p -> Sum.apply(asInt(p[0]), asInt(p[1]))).then(runnerAction.getClientAction());
+            on("hello").call(p -> Hello.apply(asString(p[0]))).then(runnerAction.getClientAction());
+            on("fizz_buzz").call(p -> FizzBuzz.apply(asInt(p[0]))).then(runnerAction.getClientAction());
         }};
         client.goLiveWith(processingRules);
     }

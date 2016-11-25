@@ -35,7 +35,7 @@ object BeFasterApp extends App {
     * |  5.  | Run "getNewRoundDescription"           |                                               |
     * |  6.  | Read description from ./challenges     |                                               |
     * |  7.  | Implement the required method in       |                                               |
-    * |      |   ./src/main/scala/solutions           |                                               |
+    * |      |   ./src/main/scala/befaster/solutions  |                                               |
     * |  8.  | Run "testConnectivity", observe output |                                               |
     * |  9.  | If ready, run "deployToProduction"     |                                               |
     * | 10.  |                                        | Type "done"                                   |
@@ -44,7 +44,7 @@ object BeFasterApp extends App {
     * +------+----------------------------------------+-----------------------------------------------+
     */
   ClientRunner.forUserWithEmail("your_email_here")
-    .withServerHostname("hostname_goes_here")
+    .withServerHostname("run.befaster.io")
     .withActionIfNoArgs(testConnectivity)
     .start(args)
 }
